@@ -1,0 +1,2 @@
+module SolboxesHelper
+end

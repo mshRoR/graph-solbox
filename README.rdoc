@@ -1,0 +1,10 @@
+== README
+
+setup instructions
+
+1. bundle install
+2. rake db:migrate
+3. rake db:seed
+4. go to browser http:// localhost:3000
+
+

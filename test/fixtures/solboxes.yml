@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: MyString
+  battery_size: 1
+  panel_size: 1
+
+two:
+  customer: MyString
+  battery_size: 1
+  panel_size: 1

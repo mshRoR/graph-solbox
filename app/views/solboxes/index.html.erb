@@ -1,0 +1,21 @@
+<h1>SOL Boxes</h1>
+<table>
+  <thead>
+  <th>SOLBox Id</th>
+  <th>Customer</th>
+  <th>Battery Size [Ah]</th>
+  <th>Panel Size [Wp]</th>
+  </thead>
+  <% @solboxes.each do |cable| %>
+    <tr>
+      <td><%= cable.id %></td>
+      <td><%= cable.customer %></td>
+      <td><%= cable.battery_size %></td>
+      <td><%= cable.panel_size %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Create SOLbox', new_solbox_path %>
+<br>
+<%= link_to 'Cables', cables_path %>

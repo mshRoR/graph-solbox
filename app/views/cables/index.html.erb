@@ -1,0 +1,20 @@
+<h1>Data Table</h1>
+<table>
+  <thead>
+  <th>Cable Id</th>
+  <th>From SolBox</th>
+  <th>To Solbox</th>
+  <th>Distance[m]</th>
+  </thead>
+  <% @cables.each do |cable| %>
+    <tr>
+      <td><%= cable.cable_identity %></td>
+      <td><%= cable.solbox_from_id %></td>
+      <td><%= cable.solbox_to_id %></td>
+      <td><%= cable.distance %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'SOLBoxes', solboxes_path %>
+<br>
+<%= link_to 'Entry Cable', new_cable_path %>

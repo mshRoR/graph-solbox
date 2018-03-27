@@ -1,0 +1,33 @@
+<h1>Solbox Entry</h1>
+<%= form_tag(@solbox) do %>
+  <div>
+    <label for="solbox-customer">Customer</label>
+    <input type="text"
+           name="solbox[customer]"
+           value=""
+           id="solbox-customer"
+           class="form-control"
+           autocomplete="off" required>
+  </div>
+  <div>
+    <label for="solbox-battery_size">Battery Size [Ah]</label>
+    <input type="number"
+           name="solbox[battery_size]"
+           value=""
+           id="solbox-battery_size"
+           class="form-control"
+           autocomplete="off" required>
+  </div>
+  <div>
+    <label for="solbox-panel_size">Panel Size [Wp]</label>
+    <input type="number"
+           name="solbox[panel_size]"
+           value=""
+           id="solbox-panel_size"
+           class="form-control"
+           autocomplete="off" required>
+  </div>
+  <div class="text-center">
+    <button type="submit">Save</button>
+  </div>
+<% end %>

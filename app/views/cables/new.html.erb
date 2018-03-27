@@ -1,0 +1,47 @@
+<h1>Cable Entry</h1>
+<%= form_tag(@cable, remote: true) do %>
+  <div>
+    <label for="cable-id">Cable ID</label>
+    <input type="text"
+           name="cable[cable_identity]"
+           value=""
+           id="cable-id"
+           class="form-control"
+           autocomplete="off" required>
+  </div>
+  <div>
+    <label for="cable_solbox_from_id">From SOLbox</label>
+    <%= select("cable", "solbox_from_id", @solboxes.collect {|p| [ p.id, p.id ] }, {prompt: 'Select Cable ID', required: true}) %>
+  </div>
+  <div>
+    <label for="cable_solbox_to_id">To SOLbox</label>
+    <%= select("cable", "solbox_to_id", @solboxes.collect {|p| [ p.id, p.id ] }, {prompt: 'Select Cable ID', required: true}) %>
+  </div>
+  <div>
+    <label for="cable-distance">Distance(m)</label>
+    <input type="number"
+           name="cable[distance]"
+           value=""
+           id="cable-distance"
+           class="form-control"
+           autocomplete="off" required>
+  </div>
+  <div class="text-center">
+    <button type="submit">Save</button>
+  </div>
+<% end %>
+
+<style type="text/css">
+  #container {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+<br><br>
+<%#= link_to 'Generate Graph', sigma_nodes_path, remote: true %>
+<br>
+<br>
+<%= link_to 'Demo Graph', sigma_nodes_path, remote: true %>
+
+<div id="container"></div>

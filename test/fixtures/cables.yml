@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cable_identity: MyString
+  solbox_from: 1
+  solbox_to: 1
+  distance: 1
+
+two:
+  cable_identity: MyString
+  solbox_from: 1
+  solbox_to: 1
+  distance: 1
