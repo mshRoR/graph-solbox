@@ -30,18 +30,14 @@
     <button type="submit">Save</button>
   </div>
 <% end %>
-
-<style type="text/css">
-  #container {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-  }
-</style>
-<br><br>
-<%#= link_to 'Generate Graph', sigma_nodes_path, remote: true %>
 <br>
 <br>
-<%= link_to 'Demo Graph', sigma_nodes_path, remote: true %>
+<span id="graph-gen">Graph</span>
 
-<div id="container"></div>
+<canvas id="springydemo" width="640" height="480" />
+
+<script>
+  $('#graph-gen').on('click', function () {
+      ajaxCall();
+  });
+</script>

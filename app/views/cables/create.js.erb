@@ -1,8 +1,4 @@
-console.log("<%= @data %>");
-<%#= raise @data.inspect %>
-sigma.parsers.json('<%= @data  %>', {
-    container: 'container',
-    settings: {
-        defaultNodeColor: '#ec5148'
-    }
+$('#graph-gen').click();
+$('#graph-gen').on('click', function () {
+    ajaxCall();
 });

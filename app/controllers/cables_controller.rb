@@ -16,7 +16,9 @@ class CablesController < ApplicationController
   end
 
   def sigma_nodes
-    @data = Cable.nodes_edges
+    data = Cable.nodes_edges
+
+    render json: data, status: :ok
   end
 
   private

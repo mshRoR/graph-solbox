@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function ajaxCall() {
+    $.ajax({
+        url: "/sigma-nodes",
+        cache: false,
+        success: function(data){
+            console.log(data);
+            jQuery(function(){
+                var graph = new Springy.Graph();
+                graph.loadJSON(data);
+
+                var springy = jQuery('#springydemo').springy({
+                    graph: graph
+                });
+            });
+        }
+    });
+}

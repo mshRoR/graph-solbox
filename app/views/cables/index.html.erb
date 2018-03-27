@@ -18,3 +18,19 @@
 <%= link_to 'SOLBoxes', solboxes_path %>
 <br>
 <%= link_to 'Entry Cable', new_cable_path %>
+
+<br>
+<br>
+<span id="graph-gen">Graph</span>
+
+<canvas id="springydemo" width="640" height="480" />
+
+<script>
+    $('#graph-gen').on('click', function () {
+        ajaxCall();
+    });
+
+    $(document).ready(function(){
+        ajaxCall();
+    });
+</script>

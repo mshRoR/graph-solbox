@@ -5,12 +5,13 @@ class Cable < ActiveRecord::Base
   private
 
   def self.nodes_edges
-    nodes = []
+    nodes = Solbox.all.pluck(:id)
     edges = []
-    self.all.each_with_index do |c, index|
-      nodes << { "id": "n#{index}", "label": "#{c.solbox_from_id}", "x": 0, "y": c.distance, "size": 2 }
-      edges << { "id": "e#{index}", "source": "#{c.solbox_from_id}", "target": "#{c.solbox_to_id}" }
+    Cable.all.each do |cable|
+      label = "#{cable.cable_identity} distance: #{cable.distance}"
+      edges << [cable.solbox_from_id, cable.solbox_to_id, { label: label }]
     end
-    { "nodes": nodes, "edges": edges }
+
+    { nodes: nodes, edges: edges }
   end
 end
